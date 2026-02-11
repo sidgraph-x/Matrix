@@ -107,6 +107,15 @@ body {
   50% { opacity: 0; }
 }
 
+@keyframes status-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 currentColor; }
+  50% { opacity: 0.6; box-shadow: 0 0 6px 2px currentColor; }
+}
+
+.status-pulse-dot {
+  animation: status-pulse 2s ease-in-out infinite;
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }

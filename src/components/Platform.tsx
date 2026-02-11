@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import GridDashboard from "./GridDashboard";
 
 const steps = [
   {
@@ -117,6 +118,8 @@ export default function Platform() {
               </motion.div>
             ))}
           </motion.div>
+
+          <GridDashboard />
         </div>
       </div>
     </section>
