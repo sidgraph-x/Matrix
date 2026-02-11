@@ -6,6 +6,7 @@ import GlitchText from "./GlitchText";
 import TypewriterText from "./TypewriterText";
 import HeroDither from "./HeroDither";
 import ClippedFrame from "./ClippedFrame";
+import FloatingLabels from "./FloatingLabels";
 
 export default function Hero() {
   const [initComplete, setInitComplete] = useState(false);
@@ -122,6 +123,7 @@ export default function Hero() {
           >
             <HeroDither />
           </ClippedFrame>
+          <FloatingLabels />
         </motion.div>
       </div>
     </section>

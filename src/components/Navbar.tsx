@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const links = [
-  { label: "infrastructure", href: "#infrastructure" },
-  { label: "network", href: "#network" },
-  { label: "platform", href: "#platform" },
+  { label: "infrastructure", href: "/#infrastructure" },
+  { label: "network", href: "/#network" },
+  { label: "platform", href: "/#platform" },
+  { label: "blog", href: "/blog" },
 ];
 
 export default function Navbar() {

@@ -24,8 +24,9 @@ export default function Footer() {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="font-mono text-[12px] text-muted">
-          &copy; 2026 matrix energy infrastructure
+        <div className="font-mono text-[12px] text-muted flex flex-col gap-1">
+          <span>&copy; 2026 matrix energy infrastructure</span>
+          <span className="text-secondary">Founders: Siddhant Saxena & Sarthak Kapil</span>
         </div>
 
         <ul className="flex items-center gap-6 md:gap-8">

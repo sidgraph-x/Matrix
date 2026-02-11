@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: "Matrix — Energy Infrastructure",
   description:
     "The operating system for energy infrastructure. Monitor, orchestrate, and optimize energy systems at planetary scale.",
+  icons: {
+    icon: "/fav.png",
+  },
 };
 
 export default function RootLayout({
