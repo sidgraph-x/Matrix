@@ -100,10 +100,10 @@ export default function Hero() {
                 </svg>
               </a>
               <a
-                href="#infrastructure"
+                href="/blog/energy-is-ais-binding-constraint"
                 className="inline-flex items-center gap-3 font-mono text-[13px] font-medium tracking-[0.04em] px-7 py-3.5 border border-border-light text-foreground rounded-md hover:border-secondary hover:bg-elevated transition-all"
               >
-                read_docs
+                read_manifesto
               </a>
             </motion.div>
           )}
