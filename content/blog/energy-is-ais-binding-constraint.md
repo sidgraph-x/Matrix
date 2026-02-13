@@ -68,6 +68,8 @@ Here is the entire crisis, compressed into five lines:
 
 Read that again. The largest grid operator in the United States has an 8-year wait to connect new power. Europe is worse — 10+ years in parts of the continent.
 
+![Infrastructure build timelines — data centers are ready in 1-2 years, but power infrastructure takes 5-10+](/infrastructure-timelines.svg)
+
 There are **2,300 GW** of generation and storage capacity sitting in U.S. interconnection queues right now. That is **twice the entire installed power plant fleet of the United States.** Of all projects that entered these queues between 2000 and 2019, only **13% reached commercial operation.** Eighty-seven percent died waiting.
 
 The grid has never moved fast. Edison's Pearl Street Station — the first commercial power plant in the United States — opened in 1882. Full rural electrification wasn't achieved until the 1950s. It took 70 years to wire a single country. We are now asking that same infrastructure to absorb an order-of-magnitude load increase in under a decade.
@@ -200,6 +202,8 @@ And this is not only a U.S. phenomenon. Yann LeCun has [highlighted](https://x.c
 The capital is here. The GPUs are here. The models are here. The algorithms are here.
 
 **The power is not here.** And the software that intelligently orchestrates distributed power for AI workloads — purpose-built for the stochastic energy signatures of synchronized gradient computation — that doesn't exist yet.
+
+![The entire AI energy supply pipeline plotted against 2030 projected demand on the same gigawatt scale](/supply-demand-gap.svg)
 
 ---
 
