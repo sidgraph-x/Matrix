@@ -26,7 +26,12 @@ export default function Footer() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="font-mono text-[12px] text-muted flex flex-col gap-1">
           <span>&copy; 2026 matrix energy infrastructure</span>
-          <span className="text-secondary">Founders: Siddhant Saxena & Sarthak Kapil</span>
+          <span className="text-secondary">
+            Founders:{" "}
+            <a href="https://x.com/sidgraph" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors underline underline-offset-2">Siddhant Saxena</a>
+            {" & "}
+            <a href="https://x.com/thesisofsarthak" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors underline underline-offset-2">Sarthak Kapil</a>
+          </span>
         </div>
 
         <ul className="flex items-center gap-6 md:gap-8">

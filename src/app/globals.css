@@ -125,7 +125,7 @@ body {
 .prose-matrix {
   font-family: var(--font-sans);
   color: var(--color-foreground);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.8;
 }
 
@@ -236,9 +236,11 @@ body {
 }
 
 .prose-matrix img {
+  width: 100%;
   max-width: 100%;
   border: 1px solid var(--color-border);
   margin: 1.5em 0;
+  display: block;
 }
 
 .prose-matrix table {
