@@ -44,7 +44,7 @@ export default async function ProblemPage({ params }: Props) {
       <nav className="crumb"><Link href="/challenges">All problems</Link><span>/</span><span>{p.group}</span></nav>
       <header className="phead">
         <h1>{p.title}</h1>
-        <p className="byline">Authored by <strong>Siddhant Saxena</strong> <span>(@sidgraph)</span></p>
+        <p className="byline">Authored by <strong>Siddhant Saxena</strong> (<a href="https://x.com/sidgraph" target="_blank" rel="noopener noreferrer">@sidgraph</a>)</p>
         <p className="q">{p.question}</p>
         <div className="tags">
           <span className="tag strong">{isCore ? "Problem" : "Computational"} {p.id}</span>

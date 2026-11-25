@@ -22,7 +22,7 @@ export default function AtlasIndex({ cards }: { cards: Card[] }) {
       <header className="hero">
         <p className="kicker">An illustrated atlas · {cards.length} problems</p>
         <h1>Open problems where energy, materials and AI infrastructure meet</h1>
-        <p className="byline">Authored by <strong>Siddhant Saxena</strong> <span>(@sidgraph)</span></p>
+        <p className="byline">Authored by <strong>Siddhant Saxena</strong> (<a href="https://x.com/sidgraph" target="_blank" rel="noopener noreferrer">@sidgraph</a>)</p>
         <p className="lede">
           Each problem below has its own working figure: the physics, chemistry or mathematics that makes it hard, drawn so you can change one assumption and watch the consequence. Fifteen are core engineering and science problems, and twenty-seven are computational problems that could be settled with algorithms and compute.
         </p>

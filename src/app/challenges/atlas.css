@@ -110,3 +110,5 @@ html:has(.atlas) ::-webkit-scrollbar-thumb:hover{background:#2f66d0}
 @media (max-width:600px){.atlas .wrap{padding:0 16px 60px}.atlas .fig{padding:10px;margin:0 -6px 24px}.atlas .fig .plate{height:400px;min-height:0}.atlas .ctr{justify-content:flex-start}.atlas .seg{flex-wrap:wrap;border-radius:12px}.atlas .slide{flex-wrap:wrap}.atlas .slide input{width:100%}.atlas .grid{grid-template-columns:1fr}.atlas .pn{grid-template-columns:1fr}.atlas .pn .r{text-align:left}}
 @media (max-width:600px){.atlas .stack thead{display:none}.atlas .stack tr{display:block;border-top:1px solid var(--line);padding:8px 0}.atlas .stack tbody th,.atlas .stack td,.atlas .stack td.src{display:block;border:0;padding:2px 0;width:auto}}
 @media (prefers-reduced-motion:reduce){.atlas .card{transition:none}.atlas .card:hover{transform:none}}
+.atlas .byline a{color:var(--ink);text-decoration:underline;text-underline-offset:2px;text-decoration-color:var(--line)}
+.atlas .byline a:hover{text-decoration-color:currentColor}
