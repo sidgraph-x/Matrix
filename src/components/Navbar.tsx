@@ -7,6 +7,7 @@ const links = [
   { label: "infrastructure", href: "/#infrastructure" },
   { label: "network", href: "/#network" },
   { label: "platform", href: "/#platform" },
+  { label: "challenges", href: "/challenges" },
   { label: "blog", href: "/blog" },
 ];
 
