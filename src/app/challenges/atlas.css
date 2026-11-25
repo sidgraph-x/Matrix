@@ -36,6 +36,8 @@ html:has(.atlas) ::-webkit-scrollbar-thumb:hover{background:#2f66d0}
 .atlas h1,.atlas h2,.atlas h3{font-family:var(--atlas-title);letter-spacing:-.02em;font-weight:600}
 .atlas .hero h1{font-size:clamp(30px,4.4vw,48px);line-height:1.08;max-width:18ch;margin:6px 0 14px}
 .atlas .kicker{color:var(--mute);margin:0;font-size:14px}
+.atlas .byline{font-family:var(--atlas-mono);font-size:12.5px;color:var(--mute);margin:-4px 0 14px;letter-spacing:.01em}
+.atlas .byline strong{color:var(--ink);font-weight:600}
 .atlas .lede{max-width:62ch;color:var(--mute);font-size:17px;margin:0 0 22px}
 .atlas .chips{display:flex;gap:8px;flex-wrap:wrap}
 .atlas .chips button[aria-pressed=true],.atlas .seg button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}

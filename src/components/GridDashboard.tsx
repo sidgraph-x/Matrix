@@ -80,19 +80,19 @@ const nodes: NodeData[] = [
 const statusColor: Record<string, string> = {
   ACTIVE: "text-accent",
   OPTIMIZING: "text-cyan",
-  STANDBY: "text-yellow-400",
+  STANDBY: "text-amber-600",
 };
 
 const statusDotBg: Record<string, string> = {
   ACTIVE: "bg-accent",
   OPTIMIZING: "bg-cyan",
-  STANDBY: "bg-yellow-400",
+  STANDBY: "bg-amber-600",
 };
 
 const statusBarColor: Record<string, string> = {
   ACTIVE: "bg-accent/80",
   OPTIMIZING: "bg-cyan/80",
-  STANDBY: "bg-yellow-400/60",
+  STANDBY: "bg-amber-600/60",
 };
 
 // ── Animated counter hook ──

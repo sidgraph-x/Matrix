@@ -1,19 +1,21 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #050505;
-  --color-foreground: #e0e0e0;
-  --color-surface: #0a0a0a;
-  --color-elevated: #111111;
-  --color-border: #1a1a1a;
-  --color-border-light: #252525;
-  --color-muted: #444444;
-  --color-secondary: #777777;
-  --color-accent: #00ff88;
-  --color-accent-dim: #00ff8818;
-  --color-accent-glow: #00ff8810;
-  --color-cyan: #0af0e8;
-  --color-cyan-dim: #0af0e818;
+  /* Light theme — paper background, ink text, deep signal green + teal accents.
+     Accent/cyan/muted all hold >= 4:1 contrast on background and surface. */
+  --color-background: #f8f9f6;
+  --color-foreground: #0c1110;
+  --color-surface: #ffffff;
+  --color-elevated: #f1f4ef;
+  --color-border: #e3e7e1;
+  --color-border-light: #cdd3cc;
+  --color-muted: #6b736d;
+  --color-secondary: #4f5752;
+  --color-accent: #00874c;
+  --color-accent-dim: #00874c14;
+  --color-accent-glow: #00874c0d;
+  --color-cyan: #0a7f8c;
+  --color-cyan-dim: #0a7f8c14;
   --font-mono: var(--font-jetbrains-mono);
   --font-sans: var(--font-inter);
   --font-display: var(--font-space-grotesk);
@@ -39,13 +41,14 @@
 
 /* ── Selection ── */
 ::selection {
-  background: var(--color-accent);
-  color: var(--color-background);
+  background: #00874c2e;
+  color: var(--color-foreground);
 }
 
 /* ── Base ── */
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {

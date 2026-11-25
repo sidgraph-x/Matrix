@@ -98,10 +98,10 @@ export default function FloatingLabels() {
             {/* Node dot with ring */}
             <span className="relative flex-shrink-0 flex items-center justify-center w-4 h-4">
               <span className="absolute inset-0 rounded-full border-[1.5px] border-accent/50" />
-              <span className="w-2 h-2 rounded-full bg-accent shadow-[0_0_6px_rgba(0,255,136,0.6)]" />
+              <span className="w-2 h-2 rounded-full bg-accent shadow-[0_0_6px_rgba(0,135,76,0.45)]" />
             </span>
             {/* Label pill */}
-            <span className="bg-[#1f5e34] border border-accent/20 rounded-[3px] px-3 py-1.5 shadow-[0_0_20px_rgba(0,255,136,0.08)]">
+            <span className="bg-[#0d3b26] border border-accent/30 rounded-[3px] px-3 py-1.5 shadow-[0_0_20px_rgba(0,135,76,0.18)]">
               <span className="font-mono text-[11px] text-white/90 whitespace-nowrap tracking-[0.02em]">
                 {label.text}
               </span>

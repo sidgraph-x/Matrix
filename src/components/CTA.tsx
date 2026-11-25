@@ -45,7 +45,7 @@ export default function CTA() {
           className="w-full max-w-[500px]"
         >
           <div className="bg-surface border border-border overflow-hidden">
-            <div className="flex items-center gap-1.5 px-4 py-2 border-b border-border bg-white/[0.02]">
+            <div className="flex items-center gap-1.5 px-4 py-2 border-b border-border bg-elevated">
               <span className="w-2 h-2 rounded-full bg-[#ff5f57]" />
               <span className="w-2 h-2 rounded-full bg-[#febc2e]" />
               <span className="w-2 h-2 rounded-full bg-[#28c840]" />

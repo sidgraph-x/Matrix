@@ -67,7 +67,7 @@ export default function GlitchText({ text, className = "" }: GlitchTextProps) {
           <span
             className="absolute inset-0 z-20"
             style={{
-              color: "#00ff88",
+              color: "#00874c",
               animation: "glitch-1 0.25s steps(3) forwards",
             }}
             aria-hidden="true"
@@ -78,9 +78,9 @@ export default function GlitchText({ text, className = "" }: GlitchTextProps) {
           <span
             className="absolute inset-0 z-20"
             style={{
-              color: "#0af0e8",
+              color: "#0a7f8c",
               animation: "glitch-2 0.25s steps(3) forwards",
-              mixBlendMode: "screen",
+              mixBlendMode: "multiply",
             }}
             aria-hidden="true"
           >

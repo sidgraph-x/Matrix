@@ -86,7 +86,7 @@ export default function Hero() {
             >
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-3 font-mono text-[13px] font-semibold tracking-[0.04em] px-7 py-3.5 bg-accent text-background rounded-md hover:bg-foreground hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,255,136,0.2)] transition-all"
+                className="group inline-flex items-center gap-3 font-mono text-[13px] font-semibold tracking-[0.04em] px-7 py-3.5 bg-accent text-background rounded-md hover:bg-foreground hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,135,76,0.2)] transition-all"
               >
                 request_access
                 <svg

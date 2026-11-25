@@ -221,7 +221,7 @@ export default function HeroDither() {
         ctx.beginPath();
         ctx.moveTo(a.sx, a.sy);
         ctx.lineTo(b.sx, b.sy);
-        ctx.strokeStyle = `rgba(10, 240, 232, ${opacity})`;
+        ctx.strokeStyle = `rgba(10, 127, 140, ${opacity})`;
         ctx.lineWidth = 0.5;
         ctx.stroke();
       }
@@ -245,7 +245,7 @@ export default function HeroDither() {
             ctx.beginPath();
             ctx.moveTo(projected[i].sx, projected[i].sy);
             ctx.lineTo(projected[j].sx, projected[j].sy);
-            ctx.strokeStyle = `rgba(0, 255, 136, ${opacity})`;
+            ctx.strokeStyle = `rgba(0, 135, 76, ${opacity})`;
             ctx.lineWidth = 0.3;
             ctx.stroke();
           }
@@ -266,21 +266,21 @@ export default function HeroDither() {
           const brightness = 0.5 + p.noise * 0.5;
           ctx.beginPath();
           ctx.arc(p.sx, p.sy, r, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(0, 255, 136, ${alpha * brightness * 0.9})`;
+          ctx.fillStyle = `rgba(0, 135, 76, ${alpha * brightness * 0.9})`;
           ctx.fill();
 
           // Occasional brighter "energy node" dot
           if (p.size > 1.5) {
             ctx.beginPath();
             ctx.arc(p.sx, p.sy, r * 2.5, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(0, 255, 136, ${alpha * 0.04})`;
+            ctx.fillStyle = `rgba(0, 135, 76, ${alpha * 0.06})`;
             ctx.fill();
           }
         } else {
           // Ocean: dim cyan dither dots
           ctx.beginPath();
           ctx.arc(p.sx, p.sy, r * 0.7, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(10, 240, 232, ${alpha * 0.25})`;
+          ctx.fillStyle = `rgba(10, 127, 140, ${alpha * 0.3})`;
           ctx.fill();
         }
 
@@ -289,7 +289,7 @@ export default function HeroDither() {
           // Extended point — draw a small bright dot at the extended position
           ctx.beginPath();
           ctx.arc(p.sx, p.sy, 1.5, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(10, 240, 232, ${alpha * 0.7})`;
+          ctx.fillStyle = `rgba(10, 127, 140, ${alpha * 0.7})`;
           ctx.fill();
 
           // Connection line from sphere surface to extended point
@@ -297,7 +297,7 @@ export default function HeroDither() {
           ctx.beginPath();
           ctx.moveTo(surfX, surfY);
           ctx.lineTo(p.sx, p.sy);
-          ctx.strokeStyle = `rgba(10, 240, 232, ${alpha * 0.15})`;
+          ctx.strokeStyle = `rgba(10, 127, 140, ${alpha * 0.15})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
@@ -314,9 +314,9 @@ export default function HeroDither() {
         cy,
         sphereRadius * 1.4
       );
-      gradient.addColorStop(0, "rgba(0, 255, 136, 0)");
-      gradient.addColorStop(0.5, "rgba(0, 255, 136, 0.015)");
-      gradient.addColorStop(1, "rgba(0, 255, 136, 0)");
+      gradient.addColorStop(0, "rgba(0, 135, 76, 0)");
+      gradient.addColorStop(0.5, "rgba(0, 135, 76, 0.03)");
+      gradient.addColorStop(1, "rgba(0, 135, 76, 0)");
       ctx.beginPath();
       ctx.arc(cx, cy, sphereRadius * 1.4, 0, Math.PI * 2);
       ctx.fillStyle = gradient;

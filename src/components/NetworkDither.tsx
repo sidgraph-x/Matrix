@@ -186,10 +186,10 @@ export default function NetworkDither() {
 
           if (alpha < 0.025) continue;
 
-          // Color: green with brightness variation
-          const g = Math.min(255, 140 + Math.floor(brightness * 115));
-          const r = Math.floor(brightness * 40);
-          const b = Math.floor(brightness * 15);
+          // Color: green that deepens toward ink on ridges (light theme)
+          const g = Math.max(90, 160 - Math.floor(brightness * 55));
+          const r = Math.floor(brightness * 8);
+          const b = Math.max(50, 95 - Math.floor(brightness * 30));
 
           ctx.beginPath();
           ctx.arc(screenX, screenY, dotSize, 0, Math.PI * 2);
@@ -200,7 +200,7 @@ export default function NetworkDither() {
           if (ridge > 0.55) {
             ctx.beginPath();
             ctx.arc(screenX, screenY, dotSize * 3.5, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(0, 255, 100, ${alpha * 0.035})`;
+            ctx.fillStyle = `rgba(0, 135, 76, ${alpha * 0.05})`;
             ctx.fill();
           }
         }

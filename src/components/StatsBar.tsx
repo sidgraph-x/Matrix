@@ -87,7 +87,7 @@ export default function StatsBar() {
         <div
           className="absolute h-px w-full opacity-[0.08]"
           style={{
-            background: "linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.6), transparent)",
+            background: "linear-gradient(90deg, transparent, rgba(0, 135, 76, 0.6), transparent)",
             animation: "scanline 4s linear infinite",
           }}
         />

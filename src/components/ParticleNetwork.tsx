@@ -61,7 +61,7 @@ export default function ParticleNetwork() {
       const time = Date.now() * 0.001;
 
       // Draw hexagonal grid faintly
-      ctx.strokeStyle = "rgba(0, 255, 136, 0.015)";
+      ctx.strokeStyle = "rgba(0, 135, 76, 0.015)";
       ctx.lineWidth = 0.5;
       const size = 30;
       for (let row = 0; row < h / (size * 1.5) + 1; row++) {
@@ -92,7 +92,7 @@ export default function ParticleNetwork() {
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.strokeStyle = `rgba(0, 255, 136, ${opacity})`;
+            ctx.strokeStyle = `rgba(0, 135, 76, ${opacity})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
 
@@ -103,7 +103,7 @@ export default function ParticleNetwork() {
               const py = nodes[i].y + (nodes[j].y - nodes[i].y) * t;
               ctx.beginPath();
               ctx.arc(px, py, 2, 0, Math.PI * 2);
-              ctx.fillStyle = "rgba(0, 255, 136, 0.8)";
+              ctx.fillStyle = "rgba(0, 135, 76, 0.8)";
               ctx.fill();
             }
           }
@@ -127,13 +127,13 @@ export default function ParticleNetwork() {
         // Glow
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.radius * 6 * pulseSize, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(0, 255, 136, 0.02)";
+        ctx.fillStyle = "rgba(0, 135, 76, 0.02)";
         ctx.fill();
 
         // Core
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.radius * pulseSize, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 255, 136, ${0.4 + pulseSize * 0.2})`;
+        ctx.fillStyle = `rgba(0, 135, 76, ${0.4 + pulseSize * 0.2})`;
         ctx.fill();
 
         // Move
