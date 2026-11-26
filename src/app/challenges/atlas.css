@@ -1,19 +1,19 @@
 /* Energy × AI open-problems atlas — ported from the Illustrated Atlas, light theme only.
    VOICE: a quiet scientific atlas; the figures do the talking.
    COLOUR: ink + grey; blue = the thing we track; warm = heat, damage, failure.
-   TYPE: Inter Tight titles, Inter text, Plex Mono only inside figures.
-   Everything is scoped under .atlas so the rest of the (dark) site is untouched. */
+   TYPE: Newsreader titles, Geist text, Plex Mono only inside figures.
+   Scoped under .atlas; it shares the site paper, Newsreader and Geist, and keeps blue as its tracking colour. */
 .atlas{color-scheme:light;
-  --bg:#ffffff;--ink:#111214;--mute:#6b6d70;--line:#e4e4e0;
-  --fig-bg:#f6f6f4;--fig-ink:#111214;--fig-mute:#6b6d70;--fig-grid:#d8d8d4;
-  --fig-acc:#2f66d0;--fig-warm:#d9481c;--fig-soft:#dbe6f8;--fig-faint:#ebebe7;
+  --bg:#f3efe7;--ink:#191714;--mute:#6f675b;--line:#d9d2c4;
+  --fig-bg:#ebe5d9;--fig-ink:#191714;--fig-mute:#6f675b;--fig-grid:#d3cabc;
+  --fig-acc:#2f66d0;--fig-warm:#d9481c;--fig-soft:#dbe3ef;--fig-faint:#e2dbce;
   --acc:var(--fig-acc);
-  --atlas-sans:var(--font-inter),Inter,system-ui,sans-serif;
-  --atlas-title:var(--font-inter-tight),"Inter Tight",var(--font-inter),Inter,sans-serif;
+  --atlas-sans:var(--font-geist),system-ui,sans-serif;
+  --atlas-title:var(--font-newsreader),Georgia,serif;
   --atlas-mono:var(--font-plex-mono),"IBM Plex Mono",ui-monospace,Menlo,monospace;
   min-height:100vh;background:var(--bg);color:var(--ink);font:15.5px/1.6 var(--atlas-sans);-webkit-font-smoothing:antialiased}
-html:has(.atlas),body:has(.atlas){background:#fff}
-html:has(.atlas) ::-webkit-scrollbar-track{background:#fff}
+html:has(.atlas),body:has(.atlas){background:#f3efe7}
+html:has(.atlas) ::-webkit-scrollbar-track{background:#f3efe7}
 html:has(.atlas) ::-webkit-scrollbar-thumb{background:#d8d8d4}
 html:has(.atlas) ::-webkit-scrollbar-thumb:hover{background:#2f66d0}
 .atlas ::selection{background:#dbe6f8;color:#111214}
@@ -25,7 +25,8 @@ html:has(.atlas) ::-webkit-scrollbar-thumb:hover{background:#2f66d0}
 .atlas .prose a,.atlas .tool a{text-decoration:underline}
 
 .atlas a{color:inherit}
-.atlas .wrap{max-width:1180px;margin:0 auto;padding:0 28px 80px}
+.atlas .wrap{max-width:1200px;margin:0 auto;padding:40px 40px 96px}
+@media(max-width:760px){.atlas .wrap{padding:28px 20px 72px}}
 .atlas .top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
 .atlas .top a{font:600 14px var(--atlas-title);text-decoration:none;letter-spacing:-.01em}
 .atlas .top .home{font:500 13px var(--atlas-sans);color:var(--mute);display:inline-flex;align-items:center;gap:6px}
@@ -33,7 +34,7 @@ html:has(.atlas) ::-webkit-scrollbar-thumb:hover{background:#2f66d0}
 .atlas .top .home b{color:var(--acc);font-weight:600}
 .atlas .chips button,.atlas .seg button,.atlas .act{font:500 13px var(--atlas-sans);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
 .atlas button:focus-visible,.atlas a:focus-visible,.atlas input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-.atlas h1,.atlas h2,.atlas h3{font-family:var(--atlas-title);letter-spacing:-.02em;font-weight:600}
+.atlas h1,.atlas h2,.atlas h3{font-family:var(--atlas-title);letter-spacing:-.015em;font-weight:400}
 .atlas .hero h1{font-size:clamp(30px,4.4vw,48px);line-height:1.08;max-width:18ch;margin:6px 0 14px}
 .atlas .kicker{color:var(--mute);margin:0;font-size:14px}
 .atlas .byline{font-family:var(--atlas-mono);font-size:12.5px;color:var(--mute);margin:-4px 0 14px;letter-spacing:.01em}

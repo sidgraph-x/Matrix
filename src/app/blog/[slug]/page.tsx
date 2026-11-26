@@ -26,11 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function formatDate(dateStr: string) {
   if (!dateStr) return "";
   const d = new Date(dateStr);
-  return d.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  return d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 }
 
 export default async function BlogPostPage({ params }: Props) {
@@ -39,70 +35,23 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   return (
-    <div className="min-h-screen">
-      {/* Back link */}
-      <div className="max-w-[760px] mx-auto px-6 md:px-12 pt-24 pb-4">
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-2 font-mono text-[12px] text-muted hover:text-accent transition-colors"
-        >
-          ← back to blog
-        </Link>
-      </div>
-
-      {/* Post header */}
-      <header className="max-w-[760px] mx-auto px-6 md:px-12 pb-10">
-        {/* Tags */}
-        {post.tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-5">
-            {post.tags.map((tag) => (
-              <span
-                key={tag}
-                className="font-mono text-[10px] font-medium tracking-[0.1em] uppercase text-accent bg-accent-dim border border-accent/10 px-2.5 py-0.5"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
-
-        <h1 className="font-display text-3xl md:text-5xl font-bold tracking-[-0.03em] leading-[1.1] mb-6">
-          {post.title}
-        </h1>
-
-        {/* Meta */}
-        <div className="flex items-center gap-4 font-mono text-[12px] text-muted tracking-[0.05em]">
-          {post.date && <span>{formatDate(post.date)}</span>}
-          {post.author && (
-            <>
-              <span className="text-border-light">|</span>
-              <span>{post.author}</span>
-            </>
-          )}
-        </div>
-      </header>
-
-      {/* Divider */}
-      <div className="max-w-[760px] mx-auto px-6 md:px-12">
-        <div className="border-t border-border" />
-      </div>
-
-      {/* Content */}
-      <article className="max-w-[760px] mx-auto px-6 md:px-12 py-10">
+    <article className="wrap pt-[clamp(48px,8vw,96px)] pb-[clamp(80px,10vw,140px)]">
+      <div className="mx-auto max-w-[720px]">
+        <Link href="/blog" className="text-[14px] text-mute underline-offset-4 hover:text-ink hover:underline">All writing</Link>
+        <header className="flex flex-col gap-6 pt-10 pb-10">
+          <h1 className="serif m-0 text-[clamp(40px,5.4vw,64px)] leading-[1.05]">{post.title}</h1>
+          {post.description && <p className="m-0 text-[20px] leading-[1.55] text-ink-3">{post.description}</p>}
+          <p className="m-0 flex flex-wrap gap-x-4 gap-y-1 border-t border-ink pt-4 text-[14px] text-mute">
+            {post.date && <span>{formatDate(post.date)}</span>}
+            {post.author && <span>{post.author}</span>}
+            {post.tags.length > 0 && <span>{post.tags.join(", ")}</span>}
+          </p>
+        </header>
         <MarkdownRenderer content={post.content} />
-      </article>
-
-      {/* Footer nav */}
-      <div className="max-w-[760px] mx-auto px-6 md:px-12 pb-20">
-        <div className="border-t border-border pt-8">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 font-mono text-[13px] font-medium text-accent hover:text-foreground transition-colors"
-          >
-            ← all posts
-          </Link>
+        <div className="mt-16 border-t border-rule pt-8">
+          <Link href="/blog" className="btn btn-line">Back to all writing</Link>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
