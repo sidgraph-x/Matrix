@@ -1,28 +1,31 @@
 import Link from "next/link";
-import HeroMotion from "@/components/home/HeroMotion";
+import Hero3D from "@/components/home/hero3d/Hero3D";
 
 export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section id="top" className="pt-[clamp(64px,10vw,120px)] pb-[72px]">
-        <div className="wrap flex flex-col gap-10">
-          <h1 className="serif m-0 max-w-[1040px] text-[clamp(46px,7vw,96px)] leading-[1.02]">
-            A frontier research lab for energy, taste and <em className="italic text-ember-deep">intelligence.</em>
+      <section id="top" className="pt-[clamp(48px,6vw,96px)] pb-[clamp(32px,3.5vw,52px)]">
+        <div className="wrap-wide flex flex-col gap-[clamp(28px,3.5vw,48px)]">
+          <h1 className="serif hero-rise m-0 text-balance text-[clamp(44px,6.2vw,120px)] leading-[0.98] tracking-[-0.025em]">
+            Self Sustaining Super Intelligence for Humankind
           </h1>
-          <div className="flex flex-wrap items-start justify-between gap-x-20 gap-y-8">
-            <p className="m-0 max-w-[620px] text-[clamp(18px,1.6vw,20px)] leading-[1.55] text-ink-3">
-              We think the next era of intelligence will be personal: powered where it lives, owned by the people it serves, and shaped by their judgment. Matrix studies the full stack that makes this possible, and builds it into a single machine.
+          <div className="hero-rise flex flex-wrap items-end justify-between gap-x-20 gap-y-7" style={{ animationDelay: ".12s" }}>
+            <p className="m-0 max-w-[640px] text-[clamp(18px,1.5vw,21px)] leading-[1.55] text-ink-3">
+              Intelligence that makes its own power, runs on its own silicon and learns the judgment of the people it serves. Matrix researches the full stack and builds it into a single machine, the Node.
             </p>
-            <Link href="/node#research" className="pt-1.5 text-[16px] text-ink underline underline-offset-4 hover:text-ember-deep">Read our research</Link>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/node" className="btn btn-ink">Explore the Node</Link>
+              <Link href="/node#research" className="btn btn-line">Read our research</Link>
+            </div>
           </div>
         </div>
       </section>
 
-      <section aria-label="From sunlight to taste, in five chapters" className="pb-[clamp(80px,10vw,120px)]">
-        <div className="wrap">
-          <div className="overflow-hidden rounded-[4px] bg-night px-[clamp(16px,3vw,40px)] pt-[clamp(16px,3vw,40px)] pb-8">
-            <HeroMotion />
+      <section aria-label="From sunlight to taste, in five chapters" className="pb-[clamp(80px,10vw,128px)]">
+        <div className="wrap-wide">
+          <div className="hero-rise overflow-hidden rounded-[6px] bg-night shadow-[0_40px_80px_-40px_rgba(25,23,20,.55)]" style={{ animationDelay: ".24s" }}>
+            <Hero3D />
           </div>
         </div>
       </section>

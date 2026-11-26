@@ -69,6 +69,10 @@ body {
 /* shared classes: they set only inline padding so Tailwind's pt-/pb- utilities never collide with them */
 .wrap { max-width: 1200px; margin-inline: auto; padding-inline: 40px; }
 @media (max-width: 760px) { .wrap { padding-inline: 20px; } }
+.wrap-wide { max-width: 1760px; margin-inline: auto; padding-inline: clamp(20px, 3.4vw, 64px); }
+@keyframes hero-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.hero-rise { animation: hero-rise .9s cubic-bezier(.2,.7,.2,1) both; }
+@media (prefers-reduced-motion: reduce) { .hero-rise { animation: none; } }
 .serif { font-family: var(--font-serif); font-weight: 300; letter-spacing: -0.02em; }
 .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
 
@@ -138,15 +142,5 @@ body {
 .ef-ring { animation: spin 30s linear infinite; transform-box: fill-box; transform-origin: center; }
 
 /* hero motion */
-@keyframes hm-chg { 0% { transform: scaleY(.12); } 100% { transform: scaleY(1); } }
-.hm-chg { animation: hm-chg 3.6s cubic-bezier(.5,0,.3,1) infinite alternate; transform-box: fill-box; transform-origin: bottom; }
-@keyframes hm-core { 0%, 100% { opacity: 0; } 35% { opacity: .95; } }
-.hm-core { animation: hm-core 2.6s ease-in-out infinite; }
-@keyframes hm-edge { 0%, 100% { opacity: .06; } 30% { opacity: .7; } }
-.hm-edge { animation: hm-edge 2.4s ease-in-out infinite; }
-@keyframes hm-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-.hm-in { animation: hm-in .9s cubic-bezier(.2,.7,.1,1) both; }
-@keyframes hm-draw { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
-.hm-draw { stroke-dasharray: 100; animation: hm-draw 2.4s cubic-bezier(.65,0,.35,1) both; }
 @keyframes hm-bar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 .hm-bar { animation: hm-bar linear both; }

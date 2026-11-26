@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-rule-soft bg-paper/90 backdrop-blur-md">
-      <div className="wrap flex h-[72px] items-center gap-10">
+      <div className={`${path === "/" ? "wrap-wide" : "wrap"} flex h-[72px] items-center gap-10`}>
         <Link href="/" className="flex items-center gap-2.5 text-ink no-underline" aria-label="Matrix home">
           <Mark />
           <span className="font-serif text-[24px] tracking-[-0.01em]">Matrix</span>
