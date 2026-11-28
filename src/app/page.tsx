@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TitleArt from "@/components/home/title/TitleArt";
 import Hero3D from "@/components/home/hero3d/Hero3D";
 
 export default function Home() {
@@ -7,9 +8,12 @@ export default function Home() {
       {/* HERO */}
       <section id="top" className="pt-[clamp(48px,6vw,96px)] pb-[clamp(32px,3.5vw,52px)]">
         <div className="wrap-wide flex flex-col gap-[clamp(28px,3.5vw,48px)]">
-          <h1 className="serif hero-rise m-0 text-balance text-[clamp(44px,6.2vw,120px)] leading-[0.98] tracking-[-0.025em]">
-            Self Sustaining Super Intelligence for Humankind
-          </h1>
+          <div className="hero-rise">
+            <TitleArt
+              text="Self Sustaining Super Intelligence for Humankind"
+              className="m-0 max-w-[15.5em] text-balance font-sans text-[clamp(44px,7vw,136px)] font-[680] leading-[0.94] tracking-[-0.05em]"
+            />
+          </div>
           <div className="hero-rise flex flex-wrap items-end justify-between gap-x-20 gap-y-7" style={{ animationDelay: ".12s" }}>
             <p className="m-0 max-w-[640px] text-[clamp(18px,1.5vw,21px)] leading-[1.55] text-ink-3">
               Intelligence that makes its own power, runs on its own silicon and learns the judgment of the people it serves. Matrix researches the full stack and builds it into a single machine, the Node.
